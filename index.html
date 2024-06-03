@@ -50,6 +50,9 @@
                 audio.play();
             });
         });
+        window.onbeforeunload = function() {
+            return "Закрыть сайт? Изменения могут не сохраниться.";
+        };
     </script>
 </body>
 </html>
