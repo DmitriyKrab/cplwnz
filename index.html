@@ -17,19 +17,36 @@
         </div>
         <nav class="menu">
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#">Главная</a></li>
+                <li><a href="#">Ютуб</a></li>
+                <li><a href="#">Ютуб</a></li>
+                <li><a href="#" id="services-button">Кто здесь главный</a></li>
             </ul>
         </nav>
     </div>
 </header>
 
+<div id="popup" class="popup hidden">
+    <div class="popup-content">
+        <span class="close-button" id="close-popup">&times;</span>
+        <h2>Contact Information</h2>
+        <table>
+            <tr>
+                <td><strong>Phone:</strong></td>
+                <td>+123 456 789</td>
+            </tr>
+            <tr>
+                <td><strong>Address:</strong></td>
+                <td>1234 Example Street, City, Country</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
 <main>
     <section class="content">
         <div class="text">
-            <h1>Welcome to CPLWNZ</h1>
+            <h1>смєрть хохлам</h1>
             <p>Discover amazing content and explore new horizons. This is the text section of the page, where you can describe your purpose or provide some introduction.</p>
         </div>
         <div class="image">
@@ -40,19 +57,49 @@
     <section class="additional-content">
         <h2>Explore More</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sit amet nisi non magna fermentum fermentum. Donec vitae mi ut magna blandit elementum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut varius ligula nec nisi facilisis, in varius sapien tempor. Praesent mattis eros non tortor gravida, et convallis lorem faucibus.</p>
     </section>
 
     <section class="more-content">
         <h2>More to Discover</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam bibendum nisi nec ex dictum, quis convallis mi vestibulum. Suspendisse potenti. Nam non libero vitae ligula interdum eleifend.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin at mauris consequat, blandit urna sit amet, fringilla ipsum. Mauris in felis nec odio volutpat sollicitudin.</p>
     </section>
 </main>
+
+
 
 <footer>
     &copy; 2025 dsaved. All rights reserved.
 </footer>
+
+<div class="marmok">
+    <img src="svg/prek.svg" alt="Hover Icon" class="hover-image">
+</div>
+
+<script>
+    // Smooth page animations
+    document.addEventListener("DOMContentLoaded", () => {
+        document.body.style.opacity = 1;
+    });
+
+    // Popup functionality
+    const servicesButton = document.getElementById("services-button");
+    const popup = document.getElementById("popup");
+    const closePopup = document.getElementById("close-popup");
+
+    servicesButton.addEventListener("click", () => {
+        popup.classList.remove("hidden");
+    });
+
+    closePopup.addEventListener("click", () => {
+        popup.classList.add("hidden");
+    });
+
+    window.addEventListener("click", (event) => {
+        if (event.target === popup) {
+            popup.classList.add("hidden");
+        }
+    });
+</script>
 
 </body>
 </html>
